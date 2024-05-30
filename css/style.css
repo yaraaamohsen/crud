@@ -1,0 +1,87 @@
+/* global css */
+:root {
+    --mainColor: #352e28;
+}
+
+body {
+    background-color: #F7ECDE;
+}
+
+.main {
+    border-top: 2px dotted var(--mainColor);
+    border-bottom: 2px dotted var(--mainColor);
+}
+
+h1 {
+    font-size: 50px;
+    font-family: "Pacifico", cursive;
+    color: var(--mainColor);
+
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    left: 0;
+    bottom: 10px;
+    background-color: #fec260;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+h1:hover::before {
+    height: 50%;
+}
+
+h2 {
+    font-family: "Righteous", sans-serif;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 50px;
+}
+
+.btnSubmit {
+    color: #fff;
+    border: 2px solid #D1512D;
+    background-color: #D1512D;
+}
+
+.btnSubmit:hover {
+    background-color: #d74922;
+    color: #fff;
+}
+
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #d99c39;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+
+.warningBox .circle {
+    width: 20px;
+    height: 20px;
+}
+
+.caption i {
+    color: #BB4120;
+}
+
+/* input.valid{
+    background-image: url(../images/form-checkmark-svgrepo-com.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+input.notvalid{
+    background-image: url(../images/form-checkmark-svgrepo-com.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+} */

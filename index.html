@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <!-- link css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container d-flex flex-column py-5 justify-content-center align-items-center w-75">
+        <h1 class="position-relative">Bookmarker</h1>
+        <div class="main d-flex flex-column my-5 w-100">
+            <h2 class="text-center py-3"> <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i
+            class="fa-solid fa-bookmark"></i></h2>
+            <label class="fw-bolder" for="siteName"> <i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+            <input oninput="validation(this);" type="text" id="siteName" class="form-control my-3 w-100" placeholder="Bookmark Name">
+            <label class="fw-bolder" for="siteUrl"> <i class="fa-solid fa-link"></i> Site URL</label>
+            <input oninput="validation(this);" type="text" id="siteUrl" class=" form-control my-3 w-100" placeholder="Website URL">
+            <button id="submitBtn" onclick="addBookmark();" class="btn btnSubmit px-5 my-3 mx-auto">Submit</button>
+        </div>
+        <table class="table text-center">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Website</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tableData">
+    
+            </tbody>
+        </table>
+    </div>
+
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
